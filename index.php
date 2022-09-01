@@ -43,6 +43,27 @@
             'poster' => 'https://images-na.ssl-images-amazon.com/images/I/81MDAIdh78L._SY355_.jpg',
             'genre' => 'Rock'
         ]
-    ];
-var_dump($discs);
+    ]
 ?>
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+    <ul>
+        <li><?php foreach($discs as $disc) : ?>
+            <h2><?php echo $disc['title'] ?></h2>
+            <h3><?php echo $disc['author'] ?></h3>
+            <h4><?php echo $disc['year'] ?></h4>
+            <h5><?php echo '<img src="$disc[poster]">' ?></h5>
+            <h6><?php echo $disc['genre'] ?></h6>
+        </li>
+    <? endforeach; ?>
+</ul>
+    </body>
+    </html>
