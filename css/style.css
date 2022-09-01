@@ -1,0 +1,12 @@
+
+
+#MainDisks{
+    background-color: #1E2D3B;
+  }
+  img{
+    max-width:100%;
+  }
+  li{list-style-type: none;}
+  .singleDisk{
+    max-width:100%;
+  }
