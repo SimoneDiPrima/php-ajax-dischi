@@ -14,13 +14,14 @@
             <div class="container py-5">
                 <div class="Disks-list d-flex">
                     <?php if(isset($discs)) : ?>
-                        <div class="text-white d-flex flex-row">
-                            <ul class="">
-                                <li><?php foreach($discs as $disc) : ?>
+                        <div class="container offset-1 col-10 text-white">
+                            <ul class="d-flex flex-wrap justify-content-between text-center">
+                                <?php foreach($discs as $disc) : ?>
+                                    <li class="col-4 p-4">
+                                    <img src="<?php echo $disc['poster']?>" alt="<?php $disc['title']?>" />
                                     <h2><?php echo $disc['title'] ?></h2>
                                     <h3><?php echo $disc['author'] ?></h3>
                                     <h4><?php echo $disc['year'] ?></h4>
-                                    <img src="<?php echo $disc['poster']?>" alt="<?php $disc['title']?>" />
                                     <h6><?php echo $disc['genre'] ?></h6>
                                 </li>
                                     <? endforeach; ?>

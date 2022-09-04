@@ -15,14 +15,16 @@
     </head>
     <body>
         <div id="root">
-            <div id="MainDisks">
-                <div v-for="disc in discs" class="singleDisk">
-                    <img :src="disc.poster" alt="">
-                    <h2>{{disc.title}}</h2>
-                    <h3>{{disc.author}}</h3>
-                    <h4>{{disc.year}}</h4>
-                    <h6>{{disc.genre}}</h6>
-                </div>
+            <div id="MainDisks" class="container offset-1 col-10 text-white">
+                <ul v-for="disc in discs" class="d-flex flex-wrap justify-content-between text-center">
+                    <li class="col-4 p-4">
+                        <img :src="disc.poster" alt="">
+                        <h2>{{disc.title}}</h2>
+                        <h3>{{disc.author}}</h3>
+                        <h4>{{disc.year}}</h4>
+                        <h6>{{disc.genre}}</h6>
+                    </li>
+                </ul> 
             </div>
         </div>
         <script src="main.js"></script>
