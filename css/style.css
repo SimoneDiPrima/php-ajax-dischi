@@ -1,5 +1,4 @@
 
-
 #MainDisks{
     background-color: #1E2D3B;
   }
@@ -10,5 +9,8 @@
     list-style-type: none;
   }
   .singleDisk{
-    height:250px;
+    max-height:250px;
+  }
+  .mainHeader{
+    height:100px;
   }

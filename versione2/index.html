@@ -10,37 +10,48 @@
         <link rel="stylesheet" href="../css/style.css">
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.js" integrity="sha512-rozBdNtS7jw9BlC76YF1FQGjz17qQ0J/Vu9ZCFIW374sEy4EZRbRcUZa2RU/MZ90X2mnLU56F75VfdToGV0RiA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://kit.fontawesome.com/77b4cc17b1.js" crossorigin="anonymous"></script>
         <title>SPOTIFY</title>
     </head>
     <body>
         <div id="root">
-            <div id="MainDisks" class="container offset-1 col-10 text-white">
-                <ul v-for="disc in discs" class="d-flex flex-wrap justify-content-between text-center">
-                    <li class="col-4 p-4">
+            <header class = "py-4">
+                <div class="mx-4 d-flex justify-content-between">
+                    <i class="fa-brands fa-spotify text-success iconSpotify"></i>
+                    <input type="text" class="bg-light" placeholder="scegli la tua canzone preferita">
+                </div>
+            </header>
+            <div class="container offset-1 col-10 text-white d-flex flex-wrap pt-5 justify-content-center">
+                <ul v-for="disc in discs" class="d-flex col-4">
+                    <li class="text-center">
                         <img :src="disc.poster" alt="">
-                        <h2>{{disc.title}}</h2>
-                        <h3>{{disc.author}}</h3>
-                        <h4>{{disc.year}}</h4>
-                        <h6>{{disc.genre}}</h6>
+                        <h4 class="text-uppercase">{{disc.title}}</h3>
+                        <h5 class="text-uppercase">{{disc.author}}</h4>
+                        <h5 class="text-uppercase">{{disc.year}}</h5>
+                        <h6 class="text-uppercase">{{disc.genre}}</h6>
                     </li>
                 </ul> 
             </div>
         </div>
         <style>
-            #MainDisks{
-            background-color: #1E2D3B;
+            *{
+                background-color:#1E2D3B;
             }
-                img{
-                 max-width:100%;
-                }
-            li{
-        list-style-type: none;
-        }
-            .singleDisk{
-            height:250px;
+            header,header > *{
+                background-color:black;
+               
             }
-            </style>
+            ul{
+                margin-left:-50px;
+            }
+            .iconSpotify{
+                font-size:200%;
+                background-color: black;
+            }
+          
+        </style>
+      
         <script src="main.js"></script>
     </body>
     </html>
